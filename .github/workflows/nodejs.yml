@@ -34,5 +34,6 @@ jobs:
         CI: true
     - name: Coverage History Action
       uses: odanado/coverage-history-action@v0
+      if: ${{ matrix.node-version == '14.x' }}
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
